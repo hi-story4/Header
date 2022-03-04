@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar_logo i {
+  color: sandybrown;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 8px 12px;
+  /*margin을 넓히면 클릭할수있는 범위가 좁아지고 padding을 넓히면 박스가 커져서 클릭할수있는 범위가 넓어진다.*/
+}
+
+.navbar_menu li:hover {
+  background-color: sandybrown;
+  border-radius: 4px;
+}
+.navbar_links {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0px;
+}
+.navbar_links li {
+  padding: 8px 12px;
+}
+
+.navbar_Btn {
+  display: none;
+  position: absolute;
+  right: 25px;
+  font-size: 24px;
+  color: sandybrown;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_links {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar_Btn {
+    display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_links.active {
+    display: flex;
+  }
+}
